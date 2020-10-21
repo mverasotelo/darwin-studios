@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Darwin Studios</title>
+    <link rel="shortcut icon" href="img/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Solway:wght@700&family=Work+Sans:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d71332221e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="body">
+    <header>
+        <ul class="header-container">
+            <li><a href=index.html><img class=logo src="img/isoB.png"></a></li>
+            <li id="menu"><a href="#" id="menu-desp" class="icon fas fa-bars"></a>
+                <nav class="menu">
+                    <ul>
+                        <li><a href=index.html>HOME</a></li>
+                        <li><a href=nosotros.html>NOSOTROS</a></li>
+                        <li><a href=contacto.html>CONTACTO</a></li>
+                        <li><a href=eventos.html>EVENTOS</a><br><br><br><hr></li>
+                        <li><ul class="redes">
+                            <li><a href="https://www.facebook.com/" target=_blank class="fab fa-facebook-square icon"> </a></li>
+                            <li><a href="https://twitter.com/" target=_blank class="fab fa-twitter icon"> </a></li>
+                            <li><a href="https://www.instagram.com/" target=_blank  class="fab fa-instagram icon"></a></li>
+                        </ul></li>
+                    </ul>
+                </nav>
+            </li>
+        </ul>
+    </header>
+    <main id="main">
+        <div id="whatsapp"><a class="fab fa-whatsapp icon" href="https://api.whatsapp.com/send?phone=+541123456789" target=_blank></a></div>
+        <div class="contacto">
+            <section class="info">
+                <h3>CONTACTO</h3>
+                <p>Cucha Cucha 1661</p>
+                <p>C1416CJK CABA</p>
+                <p>CABA, Argentina</p>
+                <p><a href="mailto:info@clubbar.com.ar?subject:Consulta">info@email.com</a></p>
+                <p>+54 11 5197 2500</p>
+            </section>
+            <section class="formulario">
+                 <form>
+                    <label>NOMBRE<br>
+                        <input type="text" name="name" required>
+                    </label><br>
+                    <label>E-MAIL
+                        <input type="email" name="email" required>
+                    </label><br>
+                    <label>TELEFONO
+                        <input type="tel" minlength="8" name="phone" required>
+                    </label><br>
+                    <label>MENSAJE<br>
+                    <textarea name="mensaje" rows="8" required></textarea>
+                    <input class="order" type="submit" value="ENVIAR">
+                </form>
+            </section>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.9045494433135!2d-58.392216284770385!3d-34.60657508045864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac396fc1709%3A0x5eca3eb25c4c0345!2sPres.%20Tte.%20Gral.%20Juan%20Domingo%20Per%C3%B3n%201651%2C%20C1037%20ACE%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1599697380501!5m2!1ses-419!2sar" align="middle" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </main>
+    <footer>
+        <div class="footercontainer">
+            <a href=index.html><img class=logo src="img/isoB.png"></a>
+            <nav>
+                <ul class="redes boton">
+                    <li><a href=nosotros.html>NOSOTROS</a></li>
+                    <li><a href=contacto.html>CONTACTO</a></li>
+                    <li><a href=eventos.html>EVENTOS</a></li>
+                </ul>
+            </nav>
+            <ul class="redes">
+                <li><a href="https://www.facebook.com/" target=_blank class="fab fa-facebook-square icon"></a></li>
+                <li><a href="https://www.instagram.com/" target=_blank  class="fab fa-instagram icon"></a></li>
+            </ul>
+            <p>Cucha Cucha 1661. C1416CJK, CABA, Argentina</p>
+            <p>Studio: +54 11 5197 2500 • Mobile online: +54 11 5062 2051 •<a href="mailto:info@clubbar.com.ar?subject:Consulta">info@email.com</a></p>
+            <a class="fas fa-arrow-circle-up icon subir" href="#body"></a>
+        </div>
+    </footer>
+</body>
+<script src="js/scripts.js"></script>
+</html>
