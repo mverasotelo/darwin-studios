@@ -1,5 +1,16 @@
+@font-face {
+    font-family:'Fogie-BoldItalic';
+       src: url('../fonts/Fogie-BoldItalic.eot');
+       src: url('../fonts/Fogie-BoldItalic.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/Fogie-BoldItalic.woff') format('woff'),
+            url('../fonts/Fogie-BoldItalic.ttf') format('truetype'),
+            url('../fonts/Fogie-BoldItalic.svg#adlerRegular') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+
 html{
-    font-family: 'Work Sans', sans-serif;
+    font-family:'Fogie-BoldItalic','Work Sans', sans-serif;
     flex-direction:column;
     background:rgb(150,150,150);;
 }
@@ -95,7 +106,6 @@ h3{
 .home{
     display:flex;
     width:100%;
-    overflow:hidden;
 }
 
 .home a{
@@ -205,7 +215,6 @@ footer{
     color:white;
     bottom:0;
     width:100%;
-    margin:0;
     background:rgb(50,50,50);
     display: flex;
     flex-direction: column;
@@ -234,7 +243,6 @@ footer{
 
 .footercontainer a{
     color:white;
-    margin:0;
     padding:0.5rem;
 }
 
@@ -263,6 +271,7 @@ footer{
 
     .home{
         flex-direction: column;
+        justify-content: stretch;
     }
 
     .contacto{
