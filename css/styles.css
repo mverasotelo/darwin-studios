@@ -201,13 +201,6 @@ h3{
     filter: grayscale(100%);
 }
 
-.cuerpo{
-    text-align:justify;
-    font-size:1.2rem;
-    margin: 2rem auto;
-    width:95%;
-}
-
 footer{
     color:white;
     bottom:0;
@@ -268,9 +261,8 @@ footer{
         margin:0 auto
     }
 
-    .cuerpo{
-        width:85%;
-        font-size:1rem;
+    .home{
+        flex-direction: column;
     }
 
     .contacto{
