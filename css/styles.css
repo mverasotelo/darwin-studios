@@ -135,8 +135,8 @@ h3{
 }
 
 .contacto{
-    padding-top:10rem;
-    padding-bottom:5rem;
+    padding-top:8rem;
+    padding-bottom:4rem;
     width:100%;
     display:flex;
     justify-content: center;
@@ -144,7 +144,7 @@ h3{
 
 .info{
     text-align: center;
-    width:30%;
+    width:35%;
 }
 
 .info p{
@@ -191,15 +191,15 @@ h3{
 }
 
 .formulario form input[type="submit"]{
-    font-family:'Work Sans', sans-serif;
+    font-family:'Fogie-BoldItalic','Work Sans', sans-serif;
     width:30%;
     position: relative;
     right:0;
     margin-top:0.5rem;
     text-align:center;
     background:transparent;
-    border: 3px solid rgb(255,204,0);
-    padding:1vw;
+    border: 2px solid black;
+    padding:0.7vw;
     font-weight:bold;
     font-size:1rem;
 }
