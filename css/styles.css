@@ -150,7 +150,7 @@ h3{
 }
 
 .contacto{
-    padding-top:8rem;
+    padding-top:9.5rem;
     padding-bottom:4rem;
     width:100%;
     display:flex;
@@ -179,6 +179,7 @@ h3{
 }
 
 .formulario form input:not([type="submit"]){
+    font-family:'Work Sans', sans-serif;
     font-size:1rem;
     background:white;
     padding:0.5rem;
@@ -267,14 +268,12 @@ footer{
 
 
 .boton li a{
-    border: 1px solid white;
     margin:0.5rem;
     padding:0.8rem;
 }
 
 .boton li a:hover{
     color:#AAA;
-    border: 1px solid #aaa;
 }
 
 .icon{
