@@ -46,7 +46,7 @@ a{
 
 header{
     z-index:10;
-    background:rgba(0,0,0,0.85);
+    background:transparent;
     position: fixed;
     width:100%;
     top:0;
@@ -66,21 +66,39 @@ header a{
     width:95%;
 }
 
-#menu-desp, .menu>ul>li:first-child, .menu>ul>li:last-child, .menu br, .menu hr{
+.menu{
     display:none;
+    position:absolute;
+    background:rgba(0,0,0,0.5);
+    padding:0;
+    width:100%;
+    margin-top:6rem;
+    height:60.5rem;
+    right:0;
+    z-index:10;
 }
 
 .menu>ul{
-    display:flex;
-}
-
-.menu>ul>li{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    justify-content: space-between;
+    align-items:flex-end;
     padding:1rem;
 }
 
-.menu ul li a:hover{
-    color:rgb(255,204,0);
+.menu ul li a, .menu ul li{
+    color:white;
+    font-weight:normal;
+    padding:0.5rem;
 }
+
+.home a h3{
+    font-size:1rem;
+    padding:1rem;
+    left:calc(50% - 50.5px);
+}
+
 
 h3{
     font-size:1.8rem;
@@ -123,19 +141,8 @@ h3{
 }
 
 
-.home a{
+.home img{
     width:100%;
-    position:relative;
-}
-
-.home a:hover{
-    transition:all .5s ease-in-out;
-    filter: grayscale(80%);
-}
-
-.home a img{
-    width:100%;
-    height:100%;
 }
 
 
@@ -277,6 +284,7 @@ footer{
 }
 
 .icon{
+    color:white;
     font-size:1.7rem;
 }
 
@@ -307,51 +315,6 @@ footer{
         margin:0 auto;
         margin-top:5rem;
         width:80%;
-    }
-
-    #menu-desp, .menu, .menu>ul>li:first-child, .menu br, .menu hr{
-        display:block;
-    }
-
-    .menu>ul>li:last-child{
-        display:inline;
-    }
-
-    .menu{
-        display:none;
-        position:absolute;
-        background:rgba(0,0,0,0.5);
-        padding:1rem 0;
-        width:20%;
-        min-width:15rem;
-        margin-top:-3.8rem;
-        height:45rem;
-        right:0;
-    }
-
-    .menu>ul{
-        display: flex;
-        flex-direction: column;
-        gap:1rem;
-        justify-content: space-between;
-        align-items:center;
-        padding:1rem;
-    }
-
-    .menu ul li a, .menu ul li{
-        color:white;
-        font-weight:normal;
-        padding:0.5rem;
-    }
-
-    #menu:hover>nav{
-        display:block;
-    }
-
-    .home a h3{
-        font-size:1rem;
-        padding:1rem;
-        left:calc(50% - 50.5px);
     }
 
     .boton{
