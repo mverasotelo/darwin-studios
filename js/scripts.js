@@ -9,10 +9,11 @@ function despMenu(){
     if(menuIcon.classList=="icon fas fa-bars"){
         menuIcon.classList="icon fas fa-times";
         menu.style.display="block";
-        header.style.background="rgba(0,0,0,0.5)";
+        menu.style.height=screen.height;
+        menu.style.animation="menuAbrir 0.5s ease";
     }else{
         menuIcon.classList="icon fas fa-bars";
+        menu.style.animation="menuCerrar 0.5s ease";
         menu.style.display="none";
-        header.style.background="transparent";
     }
 }
