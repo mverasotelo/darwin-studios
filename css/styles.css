@@ -183,6 +183,14 @@ h3{
     height:100%;
 }
 
+#pcImg{
+    display:block;
+}
+
+#phoneImg{
+    display:none;
+}
+
 .home a h3{
     color:white;
     border: 1px solid white;
@@ -364,5 +372,13 @@ footer{
 
     .nav li:hover{
         transform:translate(0px);
+    }
+
+    #pcImg{
+        display:none;
+    }
+
+    #phoneImg{
+        display:block;
     }
 }
