@@ -344,12 +344,16 @@ footer{
         background:black;
     }
 
-    .menu ul li a, .menu ul li{
+    .menu>ul>li{
+        text-align: center;
+        width:100%;
         font-size:1.5rem;
+        border-bottom: 1px solid white;
     }
 
     .menu .fa-instagram{
         font-size:2rem;
+        border-bottom:0px;
     }
 
     .menu>ul{
