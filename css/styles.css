@@ -72,6 +72,10 @@ header a{
     width:95%;
 }
 
+#menuIcon{
+    cursor:pointer;
+}
+
 .menu{
     display:none;
     position:absolute;
@@ -107,6 +111,25 @@ header a{
 }
 
 
+@keyframes prev{
+    0%{
+        left:-60rem;
+    }
+    100%{
+        left:0rem;
+    }
+}
+
+@keyframes next{
+    0%{
+        right:0rem;
+    }
+    100%{
+        right:-60rem;
+    }
+}
+
+
 .menu>ul{
     display: flex;
     flex-direction: column;
@@ -128,13 +151,6 @@ header a{
 .redes li:hover{
     transform:scale(1.1);
 }
-
-.home a h3{
-    font-size:1rem;
-    padding:1rem;
-    left:calc(50% - 50.5px);
-}
-
 
 h3{
     font-size:1.8rem;
@@ -172,6 +188,7 @@ h3{
 }
 
 .home{
+    position:relative;
     display:flex;
     width:100%;
     height:100vh;
@@ -182,12 +199,20 @@ h3{
     height:100vh;
 }
 
-#pcImg{
-    display:block;
+.prev{
+    cursor:pointer;
+    color:white;
+    position:absolute;
+    left:calc(48.2%);
+    bottom:4%;
 }
 
-#phoneImg{
-    display:none;
+.next{
+    cursor:pointer;
+    color:white;
+    position:absolute;
+    right:calc(48.2%);
+    bottom:4%;
 }
 
 .home a h3{
@@ -373,11 +398,13 @@ footer{
         transform:translate(0px);
     }
 
-    #pcImg{
-        display:none;
+    .prev{
+        font-size:0.8rem;
+        left:calc(46%);
     }
 
-    #phoneImg{
-        display:block;
+    .next{
+        font-size:0.8rem;
+        right:calc(46%);
     }
 }
