@@ -36,6 +36,23 @@ function setHomeImages(){
     }
 }
 
+home.addEventListener("mouseover", function(event){
+    if(event.target==prev){
+        event.target.classList="prev fas fa-circle";
+    }else if(event.target==next){
+        event.target.classList="next fas fa-circle";
+    }
+});
+
+home.addEventListener("mouseout", function(event){
+    if(event.target==prev){
+        event.target.classList="prev far fa-circle";
+    }else if(event.target==next){
+        event.target.classList="next far fa-circle";
+    }
+});
+
+
 function carrousel(contenedor,img,imagenes){
     contenedor.addEventListener("click", function(event){
         if(event.target==prev){
@@ -58,6 +75,3 @@ function carrousel(contenedor,img,imagenes){
         }
     });
 }
-
-
-
