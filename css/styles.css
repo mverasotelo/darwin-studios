@@ -111,25 +111,6 @@ header a{
 }
 
 
-@keyframes prev{
-    0%{
-        left:-60rem;
-    }
-    100%{
-        left:0rem;
-    }
-}
-
-@keyframes next{
-    0%{
-        right:0rem;
-    }
-    100%{
-        right:-60rem;
-    }
-}
-
-
 .menu>ul{
     display: flex;
     flex-direction: column;
@@ -199,21 +180,21 @@ h3{
     height:100vh;
 }
 
-.prev{
-    cursor:pointer;
-    color:white;
+.cursores{
     position:absolute;
-    left:calc(48.2%);
-    bottom:4%;
+    display:flex;
+    justify-content: center;
+    bottom:5%;
+    left: 0;
+    right: 0;
 }
 
-.next{
+#prev, #next{
     cursor:pointer;
     color:white;
-    position:absolute;
-    right:calc(48.2%);
-    bottom:4%;
+    padding:0.4rem;
 }
+
 
 .home a h3{
     color:white;
@@ -398,13 +379,4 @@ footer{
         transform:translate(0px);
     }
 
-    .prev{
-        font-size:0.8rem;
-        left:calc(46%);
-    }
-
-    .next{
-        font-size:0.8rem;
-        right:calc(46%);
-    }
 }
