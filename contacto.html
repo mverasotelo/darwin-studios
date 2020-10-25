@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Darwin Studios</title>
+    <title>Contacto | Darwin Studios</title>
     <link rel="shortcut icon" href="img/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Solway:wght@700&family=Work+Sans:wght@500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d71332221e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body id="body">
-    <header>
+    <header class="headerContacto">
         <ul class="header-container">
             <li><a href=index.html><img class=logo src="img/isoB.png"></a></li>
             <li><i class="icon fas fa-bars" id="menuIcon"></i></li>
@@ -19,11 +19,11 @@
     </header>
     <nav class="menu">
         <ul class="nav">
-            <li><a href=index.html>HOME</a></li>
-            <li><a href=nosotros.html>NOSOTROS</a></li>
-            <li><a href=eventos.html>NAVES</a></li>
-            <li><a href=eventos.html>PRODUCCIONES</a></li>
-            <li><a href=contacto.html>CONTACTO</a></li>
+            <li><a href=index.html>HOME</a><hr></li>
+            <li><a href=nosotros.html>NOSOTROS</a><hr></li>
+            <li><a href=naves.html>NAVES</a><hr></li>
+            <li><a href=producciones.html>PRODUCCIONES</a><hr></li>
+            <li><a href=contacto.html>CONTACTO</a><hr></li>
             <ul class="redes">
                 <li><a href="https://www.instagram.com/darwin_studios/" target=_blank  class="fab fa-instagram icon"></a></li>
             </ul>
@@ -42,16 +42,16 @@
             <section class="formulario">
                  <form>
                     <label>NOMBRE<br>
-                        <input type="text" name="name" required>
+                        <input type="text" id="name" name="name" required>
                     </label><br>
                     <label>E-MAIL
-                        <input type="email" name="email" required>
+                        <input type="email" id="email" name="email" required>
                     </label><br>
                     <label>TELEFONO
-                        <input type="tel" minlength="8" name="phone" required>
+                        <input type="tel" id="phone" minlength="8" name="phone" required>
                     </label><br>
                     <label>MENSAJE<br>
-                    <textarea name="mensaje" rows="6" required></textarea>
+                    <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
                     <input class="order" type="submit" value="ENVIAR">
                 </form>
             </section>

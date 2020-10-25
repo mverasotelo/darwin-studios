@@ -76,6 +76,11 @@ header a{
     cursor:pointer;
 }
 
+.header-container li i{
+    margin-left:1rem;
+}
+
+
 .menu{
     display:none;
     position:absolute;
@@ -100,16 +105,6 @@ header a{
         top:0rem;
     }
 }
-
-@keyframes menuCerrar{
-    0%{
-        top:0rem;
-    }
-    100%{
-        top:-60rem;
-    }
-}
-
 
 .menu>ul{
     display: flex;
@@ -141,6 +136,7 @@ h3{
 }
 
 .logo{
+    margin:0;   
     height:4rem;
 }
 
@@ -177,24 +173,23 @@ h3{
 
 .home img{
     width:100%;
-    height:100vh;
-}
-
-.cursores{
-    position:absolute;
-    display:flex;
-    justify-content: center;
-    bottom:5%;
-    left: 0;
-    right: 0;
 }
 
 #prev, #next{
+    position:absolute;
     cursor:pointer;
     color:white;
     padding:0.4rem;
+    bottom:calc(40%);
 }
 
+#prev{
+    left:2%;
+}
+
+#next{
+    right:2%;
+}
 
 .home a h3{
     color:white;
@@ -207,7 +202,7 @@ h3{
 }
 
 .contacto{
-    padding-top:9.5rem;
+    padding-top:8rem;
     padding-bottom:2rem;
     width:100%;
     height:100%;
@@ -298,7 +293,7 @@ footer{
 }
 
 .footercontainer{
-    margin:1.5rem auto;
+    margin:1.2rem auto;
     width:95%;
     display:flex;
 }
@@ -328,7 +323,7 @@ footer{
 
 .icon{
     color:white;
-    font-size:1.7rem;
+    font-size:1.8rem;
 }
 
 
