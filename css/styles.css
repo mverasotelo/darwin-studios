@@ -180,7 +180,7 @@ h3{
     cursor:pointer;
     color:white;
     padding:0.4rem;
-    bottom:calc(40%);
+    bottom:calc(45%);
 }
 
 #prev{
@@ -305,6 +305,11 @@ footer{
     font-family: 'Work Sans', sans-serif;
     font-weight:normal;
     font-size:0.7rem;
+}
+
+.footerHome{
+    position:absolute;
+    bottom:0;
 }
 
 .redes{
