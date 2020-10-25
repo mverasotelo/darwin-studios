@@ -167,12 +167,12 @@ h3{
     position:relative;
     display:flex;
     width:100%;
-    height:100vh;
+    height:92vh;
 }
 
 .home img{
     width:100%;
-    height:100vh;
+    height:100%;
 }
 
 #prev, #next{
@@ -305,11 +305,6 @@ footer{
     font-family: 'Work Sans', sans-serif;
     font-weight:normal;
     font-size:0.7rem;
-}
-
-.footerHome{
-    position:absolute;
-    bottom:0;
 }
 
 .redes{
