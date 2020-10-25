@@ -379,4 +379,7 @@ footer{
         transform:translate(0px);
     }
 
+    .icon{
+        font-size:2rem;
+    }
 }
