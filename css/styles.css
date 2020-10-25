@@ -21,7 +21,6 @@
   }
 
 html{
-    height:100vh;
     font-size:90%;
     font-family:'Fogie-Medium','Work Sans', sans-serif;
     letter-spacing:0.15rem;
@@ -29,7 +28,6 @@ html{
     flex-direction:column;
     background:rgb(150,150,150);
 }
-
 
 *{
     box-sizing: border-box;
