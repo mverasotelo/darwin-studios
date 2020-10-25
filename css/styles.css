@@ -76,6 +76,11 @@ header a{
     cursor:pointer;
 }
 
+.iconos{
+    display:flex;
+    justify-content:space-between;
+}
+
 .header-container li i{
     margin-left:1rem;
 }
