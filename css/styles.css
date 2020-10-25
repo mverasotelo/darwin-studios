@@ -31,10 +31,6 @@ html{
 }
 
 
-body{
-    height:100vh;
-}
-
 *{
     box-sizing: border-box;
     margin:0;
@@ -315,7 +311,7 @@ footer{
 
 .footerHome{
     position:absolute;
-    bottom:0%;
+    bottom:0;
 }
 
 .redes{
