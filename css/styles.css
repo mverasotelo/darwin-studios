@@ -90,6 +90,10 @@ header a{
     margin-top:0rem;
     right:0;
     z-index:10;
+    animation:menuAbrir 0.5s ease;
+    -webkit-animation:menuAbrir 0.5s ease;
+    -moz-animation:menuAbrir 0.5s ease;
+    -o-animation:menuAbrir 0.5s ease;
 }
 
 .menu hr{
@@ -306,6 +310,10 @@ footer{
     font-family: 'Work Sans', sans-serif;
     font-weight:normal;
     font-size:0.7rem;
+}
+
+.fixed{
+    position:fixed;
 }
 
 .redes{
