@@ -14,7 +14,7 @@ menuIcon.addEventListener("click", despMenu);
 if(img!=null){
     setHomeImages();
     carrousel(home, img, imagenes);
-    setInterval(pasarFoto,5000);
+    setInterval(pasarFoto,4000);
     img.addEventListener("mousedown", clearInterval());
     window.addEventListener("resize", setHomeImages);
 }
