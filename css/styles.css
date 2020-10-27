@@ -264,7 +264,7 @@ h3{
 .formulario form input[type="submit"]{
     font-family:'Fogie-Medium','Work Sans', sans-serif;
     letter-spacing:0.2rem;
-    width:30%;
+    min-width:30%;
     margin-top:0.8rem;
     text-align:center;
     background:transparent;
