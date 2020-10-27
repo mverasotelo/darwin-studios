@@ -26,7 +26,7 @@ html{
     letter-spacing:0.15rem;
     display:flex;
     flex-direction:column;
-    background:rgb(150,150,150);
+    background:#233237;
 }
 
 *{
@@ -52,6 +52,10 @@ header{
     top:0;
     height:6rem;
     display:flex;
+}
+
+.bg-black{
+    background:rgba(0,0,0,0.8);
 }
 
 header a{
@@ -82,7 +86,7 @@ header a{
 
 .menu{
     display:none;
-    position:absolute;
+    position:fixed;
     background:rgba(0,0,0,0.5);
     padding-top:6rem;
     width:100%;
@@ -98,6 +102,10 @@ header a{
 
 .menu hr{
     display:none;
+}
+
+.active{
+    color:yellow;
 }
 
 @keyframes menuAbrir{
@@ -134,7 +142,6 @@ header a{
 h3{
     font-size:1.8rem;
     text-align:center;
-    font-weight:bold;
     margin-bottom:1rem;
 }
 
@@ -171,7 +178,7 @@ h3{
     position:relative;
     display:flex;
     width:100%;
-    height:93vh;
+    height:96vh;
 }
 
 .home img{
@@ -195,16 +202,6 @@ h3{
     right:2%;
 }
 
-.home a h3{
-    color:white;
-    border: 1px solid white;
-    padding:2rem;
-    position:absolute;
-    z-index:1;
-    top:calc(50%);
-    left:calc(50% - 102.5px);
-}
-
 .contacto{
     padding-top:8rem;
     padding-bottom:2rem;
@@ -223,6 +220,7 @@ h3{
     margin-top:0.5rem;
     font-size:1rem;
 }
+
 .formulario{
     width:40%;
     margin:0;
@@ -232,7 +230,6 @@ h3{
 .formulario form{
     display:flex;
     flex-direction: column;
-    font-weight:bold;
 }
 
 .formulario form input:not([type="submit"]){
@@ -244,7 +241,7 @@ h3{
     height:2rem;
     width:100%;
     border:none;
-    background: white;
+    background: #f4f4f4
     outline:none;
 }
 
@@ -261,19 +258,18 @@ h3{
     border:none;
     resize:vertical;
     outline:none;
+    background: #f4f4f4
 }
 
 .formulario form input[type="submit"]{
     font-family:'Fogie-Medium','Work Sans', sans-serif;
     letter-spacing:0.2rem;
     width:30%;
-    position: relative;
-    right:0;
-    margin-top:0.5rem;
+    margin-top:0.8rem;
     text-align:center;
     background:transparent;
-    border: 2px solid black;
-    padding:0.7vw;
+    border: 2px solid rgb(184, 175, 148);
+    padding: 0.6rem 1rem;
     font-weight:bold;
     font-size:1rem;
 }
@@ -292,13 +288,14 @@ footer{
     color:white;
     bottom:0;
     width:100%;
-    height:8%;
+    min-height:5%;
     background:rgb(50,50,50);
     display: flex;
 }
 
 .footercontainer{
-    margin:1.2rem auto;
+    padding:0.5rem;
+    margin:auto;
     width:95%;
     display:flex;
 }
@@ -336,7 +333,7 @@ footer{
 }
 
 
-@media screen and (max-width:720px){
+@media screen and (max-width:720px) and(min-height:720px){
 
     .header-container{
         width:90%;
@@ -353,7 +350,7 @@ footer{
 
     .formulario{
         margin:0 auto;
-        margin-top:5rem;
+        margin-top:2rem;
         width:80%;
     }
 
