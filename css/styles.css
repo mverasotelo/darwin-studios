@@ -333,7 +333,7 @@ footer{
 }
 
 
-@media screen and (max-width:720px) and(min-height:720px){
+@media screen and (max-width:720px){
 
     .header-container{
         width:90%;
