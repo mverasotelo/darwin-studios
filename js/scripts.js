@@ -10,15 +10,19 @@ var cont=0;
 
 
 menuIcon.addEventListener("click", despMenu);
-setHomeImages();
-carrousel(home, img, imagenes);
-window.addEventListener("resize", setHomeImages);
+menuIcon.addEventListener("click", despMenu);
+if(img!=null){
+    setHomeImages();
+    carrousel(home, img, imagenes);
+    setInterval(pasarFoto,5000);
+    img.addEventListener("mousedown", clearInterval());
+    window.addEventListener("resize", setHomeImages);
+}
 
 function despMenu(){
     if(menuIcon.classList=="icon fas fa-bars"){
         menuIcon.classList="icon fas fa-times";
         menu.style.display="block";
-        menu.style.animation="menuAbrir 0.5s ease";
     }else{
         menuIcon.classList="icon fas fa-bars";
         menu.style.animation="menuCerrar 0.5s ease";
@@ -36,25 +40,51 @@ function setHomeImages(){
     }
 }
 
+function retrocederFoto(){
+    if(cont>0){
+        img.src = imagenes[cont - 1];
+        cont--;
+    }else{
+        img.src = imagenes[imagenes.length - 1];
+        cont=imagenes.length - 1;
+    }
+}
+
+function pasarFoto(){
+    if(cont < imagenes.length - 1){
+        img.src = imagenes[cont + 1];
+        cont++;
+    }else{
+        img.src = imagenes[0];
+        cont=0;
+    }
+}
+
 function carrousel(contenedor,img,imagenes){
     contenedor.addEventListener("click", function(event){
         if(event.target==prev){
-            if(cont>0){
-                img.src = imagenes[cont - 1];
-                cont--;
-            }else{
-                img.src = imagenes[imagenes.length - 1];
-                cont=imagenes.length - 1;
-            }
+            retrocederFoto();
         }
         else if(event.target==next){
-            if(cont < imagenes.length - 1){
-                img.src = imagenes[cont + 1];
-                cont++;
-            }else{
-                img.src = imagenes[0];
-                cont=0;
-            }
+            pasarFoto();
         }
     });
+}
+
+const nombre = document.querySelector("#name");
+const email = document.querySelector("#email");
+const tel = document.querySelector("#phone");
+const mensaje = document.querySelector("#mensaje");
+const formulario =document.querySelector(".formulario");
+
+if(formulario!=null){
+    formulario.addEventListener("submit", enviarForm);
+}
+
+function enviarForm(event){
+    var link="mer-vs@hotmail.com?subject=Consulta desde la web&body=Nombre: "+nombre.value+"<br>Teléfono:"+phone.value;
+    window.location.href="mailto:"+link;
+    if(event){
+        alert(event.target.tagName);
+    }
 }
