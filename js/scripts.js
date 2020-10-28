@@ -5,19 +5,21 @@ const home = document.querySelector(".home");
 const prev = document.querySelector("#prev");
 const next = document.querySelector("#next");
 const img = document.querySelector("#img");
+const loader = document.querySelector(".loader");
 var imagenes;
 var cont=0;
 
-
-menuIcon.addEventListener("click", despMenu);
 menuIcon.addEventListener("click", despMenu);
 if(img!=null){
     setHomeImages();
     carrousel(home, img, imagenes);
     setInterval(pasarFoto,4000);
-    img.addEventListener("mousedown", clearInterval());
     window.addEventListener("resize", setHomeImages);
 }
+
+window.addEventListener('load', () => {
+    loader.classList="";
+});
 
 function despMenu(){
     if(menuIcon.classList=="icon fas fa-bars"){
@@ -70,6 +72,7 @@ function carrousel(contenedor,img,imagenes){
         }
     });
 }
+
 
 const nombre = document.querySelector("#name");
 const email = document.querySelector("#email");
