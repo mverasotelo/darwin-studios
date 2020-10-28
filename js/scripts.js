@@ -25,10 +25,14 @@ function despMenu(){
         menuIcon.classList="icon fas fa-times";
         menu.style.display="block";
     }else{
-        menuIcon.classList="icon fas fa-bars";
-        menu.style.animation="menuCerrar 0.5s ease";
-        menu.style.display="none";
+        cerrarMenu();
     }
+}
+
+function cerrarMenu(){
+    menuIcon.classList="icon fas fa-bars";
+    menu.style.animation="menuCerrar 0.5s ease";
+    menu.style.display="none";
 }
 
 function setHomeImages(){
@@ -88,6 +92,17 @@ mc.on('swipeleft', function () {
 mc.on('swiperight', function () {
     pasarFoto()
 });
+
+var mc = new Hammer.Manager(menu);
+
+mc.add(new Hammer.Swipe({
+  direction: Hammer.DIRECTION_VERTICAL
+}));
+
+mc.on('swipeup', function () {
+    cerrarMenu()
+});
+
 
 const nombre = document.querySelector("#name");
 const email = document.querySelector("#email");
