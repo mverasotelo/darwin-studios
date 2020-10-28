@@ -13,7 +13,6 @@ menuIcon.addEventListener("click", despMenu);
 if(img!=null){
     setHomeImages();
     carrousel(home, img, imagenes);
-    setInterval(pasarFoto,4000);
     window.addEventListener("resize", setHomeImages);
 }
 
@@ -42,6 +41,8 @@ function setHomeImages(){
     }
 }
 
+
+//retroceder y avanzar foto
 function retrocederFoto(){
     if(cont>0){
         img.src = imagenes[cont - 1];
@@ -73,6 +74,20 @@ function carrousel(contenedor,img,imagenes){
     });
 }
 
+//Touch
+var mc = new Hammer.Manager(img);
+
+mc.add(new Hammer.Swipe({
+  direction: Hammer.DIRECTION_HORIZONTAL
+}));
+
+mc.on('swipeleft', function () {
+    retrocederFoto()
+});
+
+mc.on('swiperight', function () {
+    pasarFoto()
+});
 
 const nombre = document.querySelector("#name");
 const email = document.querySelector("#email");
