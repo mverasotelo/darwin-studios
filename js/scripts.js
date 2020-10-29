@@ -9,20 +9,22 @@ const loader = document.querySelector(".loader");
 var imagenes;
 var cont=0;
 
-menuIcon.addEventListener("click", despMenu);
-if(img!=null){
-    setHomeImages();
-    carrousel(home, img, imagenes);
-    window.addEventListener("resize", setHomeImages);
-}
 
 window.addEventListener('load', () => {
     loader.classList="";
 });
 
+menuIcon.addEventListener("click", despMenu);
+
+if(img!=null){
+    setHomeImages();
+    carrousel(home, img, imagenes);
+    window.addEventListener("resize", setHomeImages);
+}
 function despMenu(){
     if(menuIcon.classList=="icon fas fa-bars"){
         menuIcon.classList="icon fas fa-times";
+        menu.style.animation="menuAbrir 0.5s ease";
         menu.style.display="block";
     }else{
         cerrarMenu();
@@ -103,7 +105,7 @@ mc.on('swipeup', function () {
     cerrarMenu()
 });
 
-
+//formulario de contacto
 const nombre = document.querySelector("#name");
 const email = document.querySelector("#email");
 const tel = document.querySelector("#phone");
