@@ -396,8 +396,13 @@ footer{
         text-align: center;
         width:100%;
         padding:1rem;
+        padding-top:1.5rem;
         font-size:1.5rem;
         border-bottom: 1px solid #eee;
+    }
+
+    .menu>ul>li:last-child{
+        border-bottom: none;
     }
 
     .menu .fa-instagram{
