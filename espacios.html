@@ -4,17 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto | Darwin Studios</title>
+    <title>Naves | Darwin Studios</title>
     <link rel="shortcut icon" href="img/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Solway:wght@700&family=Work+Sans:wght@500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d71332221e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body id="body">
-    <header class="bg-black">
+<body>
+    <div class="loader"></div>
+    <header>
         <ul class="header-container">
             <li><a href=index.html><img class=logo src="img/isoB.png"></a></li>
-            <li class="iconos"><i><a class="fab fa-instagram icon" href="https://www.instagram.com/darwin_studios/" target=_blank></a></i><i class="icon fas fa-bars" id="menuIcon"></i></li>
+            <li><i class="icon fas fa-bars" id="menuIcon"></i></li>
         </ul>
     </header>
     <nav class="menu">
@@ -23,7 +24,10 @@
             <li><a href=nosotros.html>NOSOTROS</a><hr></li>
             <li><a href=naves.html>NAVES</a><hr></li>
             <li><a href=producciones.html>PRODUCCIONES</a><hr></li>
-            <li><a class="active" href=contacto.html>CONTACTO</a><hr></li>
+            <li><a href=contacto.html>CONTACTO</a><hr></li>
+            <ul class="redes">
+                <li><a href="https://www.instagram.com/darwin_studios/" target=_blank  class="fab fa-instagram icon"></a></li>
+            </ul>
         </ul>
     </nav>
     <main id="main">
@@ -39,16 +43,16 @@
             <section class="formulario">
                  <form>
                     <label>NOMBRE<br>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" name="name" required>
                     </label><br>
                     <label>E-MAIL
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" name="email" required>
                     </label><br>
                     <label>TELEFONO
-                        <input type="tel" id="phone" minlength="8" name="phone" required>
+                        <input type="tel" minlength="8" name="phone" required>
                     </label><br>
                     <label>MENSAJE<br>
-                    <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+                    <textarea name="mensaje" rows="6" required></textarea>
                     <input class="order" type="submit" value="ENVIAR">
                 </form>
             </section>
@@ -59,7 +63,7 @@
     </main>
     <footer>
         <div class="footercontainer">
-            <p>Niceto Vega 5350 I Palermo I Buenos Aires I Argentina I info@darwinstudios.com.ar</a></p>
+            <p>NICETO VEGA 5780 | PALERMO | CABA | ARGENTINA | WWW.DARWIN-STUDIOS.COM |<a href="mailto:info@darwinstudios.com.ar?subject:Consulta"> INFO@DARWINSTUDIOS.COM.AR</a></p>
         </div>
     </footer>
 </body>
