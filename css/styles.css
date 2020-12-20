@@ -214,7 +214,6 @@ h3{
 }
 
 .fs-images{
-    padding-top:6rem;
     width:100%;
     min-height:96vh;
     position:sticky;
@@ -245,7 +244,7 @@ h3{
 
 .contacto{
     font-family:"Fogie-light", "work-sans", "sans-serif";
-    padding-top:8rem;
+    padding-top:10rem;
     padding-bottom:2rem;
     width:100%;
     height:100%;
@@ -309,15 +308,15 @@ h3{
 
 .formulario form input[type="submit"]{
     font-family:'Fogie-Medium','Work Sans', sans-serif;
-    letter-spacing:0.2rem;
+    letter-spacing:0.5rem;
     min-width:30%;
     margin-top:0.8rem;
     text-align:center;
     background:transparent;
     border: 2px solid rgb(184, 175, 148);
     padding: 0.6rem 1rem;
-    font-weight:bold;
     font-size:1rem;
+    color:#f4f4f4;
 }
 
 .map{
@@ -420,7 +419,7 @@ background:rgba(0,0,0,0.5);
     }
 
     .contacto{
-        padding-top:8rem;
+        padding-top:10rem;
         flex-direction: column;
     }
 
@@ -471,6 +470,7 @@ background:rgba(0,0,0,0.5);
     }
 
     .fs-images{
+        padding-top: 6rem;
         height:auto;
     }
 

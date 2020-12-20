@@ -15,23 +15,25 @@ window.addEventListener('load', () => {
     loader.classList="";
 });
 
-let lastScroll = 0;
-window.addEventListener('scroll', () => {
-  const currentScroll = window.pageYOffset;
-  if (currentScroll == 0) {
-    header.classList.remove("scroll-up");
-    header.style="transition:ease 0.5s"
-    return;
-  }
-  if (currentScroll > lastScroll) {
-    header.classList="scroll-down";
-  } else if (currentScroll < lastScroll) {
-    // up
-    header.classList="scroll-up header";
-    header.style="transition:ease 0.5s"
-  }
-  lastScroll = currentScroll;
-});
+if(menu.style.display!="none"){
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    if (currentScroll == 0) {
+        header.classList.remove("scroll-up");
+        header.style="transition:ease 0.5s"
+        return;
+    }
+    if (currentScroll > lastScroll) {
+        header.classList="scroll-down";
+    } else if (currentScroll < lastScroll) {
+        // up
+        header.classList="scroll-up header";
+        header.style="transition:ease 0.5s"
+    }
+    lastScroll = currentScroll;
+    });
+}
 
 menuIcon.addEventListener("click", despMenu);
 
@@ -100,20 +102,20 @@ function carrousel(contenedor,img,imagenes){
 }
 
 //Touch
-var mc = new Hammer.Manager(img);
+if(img!=null){
+    var mc = new Hammer.Manager(img);
+    mc.add(new Hammer.Swipe({
+    direction: Hammer.DIRECTION_HORIZONTAL
+    }));
 
-mc.add(new Hammer.Swipe({
-  direction: Hammer.DIRECTION_HORIZONTAL
-}));
+    mc.on('swipeleft', function () {    
+        retrocederFoto()
+    });
 
-mc.on('swipeleft', function () {
-    retrocederFoto()
-});
-
-mc.on('swiperight', function () {
-    pasarFoto()
-});
-
+    mc.on('swiperight', function () {
+        pasarFoto()
+    });
+}
 var mc = new Hammer.Manager(menu);
 
 mc.add(new Hammer.Swipe({
