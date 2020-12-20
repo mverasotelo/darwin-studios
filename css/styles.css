@@ -76,7 +76,7 @@ a{
     100% { transform: rotate(360deg); }
   }
 
-header{
+.header{
     z-index:15;
     background:transparent;
     position: fixed;
@@ -214,9 +214,10 @@ h3{
 }
 
 .fs-images{
+    padding-top:6rem;
     width:100%;
-    height:96vh;
-    position:relative;
+    min-height:96vh;
+    position:sticky;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -381,12 +382,11 @@ footer{
 
 
 .img-text{
-    margin-top:6rem;
     position:absolute;
     width:80%;
     bottom:5%;
     left:3%;
-    overflow: hidden;
+    overflow:auto;
 }
 
 #nosotros p{
@@ -395,6 +395,15 @@ footer{
     font-size:1.3rem;
     text-align: left;
     line-height: 1.8rem;
+}
+   
+.scroll-down{
+transform: translate(0, -100%);
+}
+
+.scroll-up{
+transform: none;
+background:rgba(0,0,0,0.5);
 }
 
 @media screen and (max-width:720px){
@@ -462,22 +471,20 @@ footer{
     }
 
     .fs-images{
-        height:94.5vh;
+        height:auto;
     }
 
     .img-text{
-    margin-top:6rem;
-    width:90%;
-    margin-left:auto;
-    margin-right:auto;
-    left:0;
-    right:0;
-    overflow: hidden;
+        position: relative;
+        padding:5%;
+        width:90%;
+        height:auto;
+        overflow-y: auto;
     }
 
     #nosotros p{
-    margin-top:0.5rem;
-    font-size:1.2rem;
-    line-height: 1.4rem;
+        margin-top:0.5rem;
+        font-size:1.2rem;
+        line-height: 1.4rem;
 }
 }

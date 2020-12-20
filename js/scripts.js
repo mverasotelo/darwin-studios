@@ -1,3 +1,4 @@
+const body = document.body;
 const menuIcon = document.querySelector("#menuIcon");
 const menu = document.querySelector(".menu");
 const header = document.querySelector("header");
@@ -12,6 +13,22 @@ var cont=0;
 
 window.addEventListener('load', () => {
     loader.classList="";
+});
+
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+  if (currentScroll == 0) {
+    header.classList.remove("scroll-up");
+    return;
+  }
+  if (currentScroll > lastScroll) {
+    header.classList="scroll-down";
+  } else if (currentScroll < lastScroll) {
+    // up
+    header.classList="scroll-up header";
+  }
+  lastScroll = currentScroll;
 });
 
 menuIcon.addEventListener("click", despMenu);
