@@ -20,6 +20,7 @@ window.addEventListener('scroll', () => {
   const currentScroll = window.pageYOffset;
   if (currentScroll == 0) {
     header.classList.remove("scroll-up");
+    header.style="transition:ease 0.5s"
     return;
   }
   if (currentScroll > lastScroll) {
@@ -27,6 +28,7 @@ window.addEventListener('scroll', () => {
   } else if (currentScroll < lastScroll) {
     // up
     header.classList="scroll-up header";
+    header.style="transition:ease 0.5s"
   }
   lastScroll = currentScroll;
 });

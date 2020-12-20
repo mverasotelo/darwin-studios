@@ -402,7 +402,6 @@ transform: translate(0, -100%);
 }
 
 .scroll-up{
-transition: ease 0.3s;
 transform: none;
 background:rgba(0,0,0,0.5);
 }
