@@ -15,25 +15,6 @@ window.addEventListener('load', () => {
     loader.classList="";
 });
 
-if(menu.style.display!="none"){
-    let lastScroll = 0;
-    window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    if (currentScroll == 0) {
-        header.classList.remove("scroll-up");
-        header.style="transition:ease 0.5s"
-        return;
-    }
-    if (currentScroll > lastScroll) {
-        header.classList="scroll-down";
-    } else if (currentScroll < lastScroll) {
-        // up
-        header.classList="scroll-up header";
-        header.style="transition:ease 0.5s"
-    }
-    lastScroll = currentScroll;
-    });
-}
 
 menuIcon.addEventListener("click", despMenu);
 
@@ -42,20 +23,44 @@ if(img!=null){
     carrousel(home, img, imagenes);
     window.addEventListener("resize", setHomeImages);
 }
+
+window.addEventListener('scroll', cambioHeader);
+
 function despMenu(){
     if(menuIcon.classList=="icon fas fa-bars"){
         menuIcon.classList="icon fas fa-times";
         menu.style.animation="menuAbrir 0.5s ease";
         menu.style.display="block";
+        window.removeEventListener('scroll', cambioHeader);
     }else{
         cerrarMenu();
     }
 }
 
+window.addEventListener('scroll', cambioHeader);
+
 function cerrarMenu(){
     menuIcon.classList="icon fas fa-bars";
     menu.style.animation="menuCerrar 0.5s ease";
     menu.style.display="none";
+    window.addEventListener('scroll', cambioHeader);
+}
+
+let lastScroll = 0;
+function cambioHeader(){
+    const currentScroll = window.pageYOffset;
+    if (currentScroll == 0) {
+        header.classList="header";
+        header.style="transition:ease 0.5s";
+        return;
+    }
+    if (currentScroll > lastScroll) {
+        header.classList="scroll-down";
+    } else if (currentScroll < lastScroll) {
+        header.classList="scroll-up header";
+        header.style="transition:ease 0.5s";
+    }
+    lastScroll = currentScroll;
 }
 
 function setHomeImages(){
