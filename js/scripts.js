@@ -1,22 +1,13 @@
 const body = document.body;
-const menuIcon = document.querySelector("#menuIcon");
-const menu = document.querySelector(".menu");
 const header = document.querySelector("header");
+menuIcon=document.querySelector("#menuIcon");
 const home = document.querySelector(".home");
 const prev = document.querySelector("#prev");
 const next = document.querySelector("#next");
 const img = document.querySelector("#img");
-const loader = document.querySelector(".loader");
 var imagenes;
 var cont=0;
 
-
-window.addEventListener('load', () => {
-    loader.classList="";
-});
-
-
-menuIcon.addEventListener("click", despMenu);
 
 if(img!=null){
     setHomeImages();
@@ -26,42 +17,23 @@ if(img!=null){
 
 window.addEventListener('scroll', cambioHeader);
 
-function despMenu(){
-    if(menuIcon.classList=="icon fas fa-bars"){
-        menuIcon.classList="icon fas fa-times";
-        menu.style.animation="menuAbrir 0.5s ease";
-        menu.style.display="block";
-        window.removeEventListener('scroll', cambioHeader);
-    }else{
-        cerrarMenu();
-    }
-}
-
-window.addEventListener('scroll', cambioHeader);
-
-function cerrarMenu(){
-    menuIcon.classList="icon fas fa-bars";
-    menu.style.animation="menuCerrar 0.5s ease";
-    menu.style.display="none";
-    window.addEventListener('scroll', cambioHeader);
-}
-
 let lastScroll = 0;
 function cambioHeader(){
-    const currentScroll = window.pageYOffset;
+    const currentScroll = window.scrollY;
     if (currentScroll == 0) {
         header.classList="header";
         header.style="transition:ease 0.5s";
         return;
     }
     if (currentScroll > lastScroll) {
-        header.classList="scroll-down";
+        header.classList="header scroll-down";
     } else if (currentScroll < lastScroll) {
-        header.classList="scroll-up header";
+        header.classList="header scroll-up";
         header.style="transition:ease 0.5s";
     }
     lastScroll = currentScroll;
 }
+
 
 function setHomeImages(){
     if(window.matchMedia('(max-width:720px)').matches){

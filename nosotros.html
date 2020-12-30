@@ -5,29 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros | Darwin Studios</title>
+    <meta name="description" content="Darwin Studios es un salón de eventos y complejo de locaciones que surge de la reconversión de una fábrica antigua en pleno Palermo.">
+    <meta name="keywords" content="set, locación, jornada de filmación, rodaje, streaming, estudio, fotografía, estudio de tv, venue, darwin studios, darwin estudios">
     <link rel="shortcut icon" href="img/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Solway:wght@700&family=Work+Sans:wght@500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d71332221e.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g==" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="loader"></div>
+    <div v-show="show" id="loader"></div>
     <header class="header">
-        <ul class="header-container">
-            <li><a href=index.html><img class=logo src="img/isoB.png"></a></li>
-            <li class="iconos"><i><a class="fab fa-instagram icon" href="https://www.instagram.com/darwin_studios/" target=_blank></a></i><i class="icon fas fa-bars" id="menuIcon"></i></li>
+        <ul id="menuDesp" class="header-container">
+            <li><a href=index.html><img class="logo" src="img/isoB.png"></a></li>
+            <li class="iconos">
+                <i><a class="fab fa-instagram icon" href="https://www.instagram.com/darwin_studios/" target=_blank></a></i>
+                <i id="menuIcon" class="icon fas fa-bars" :class="iconoMenu" @click="desplegarMenu"></i>
+                <nav id="menu" :class="menuClass">
+                    <ul class="nav">
+                        <li><a href=espacios.html>ESPACIOS</a><hr></li>
+                        <li><a href=trabajos.html>TRABAJOS</a><hr></li>
+                        <li><a href=nosotros.html>NOSOTROS</a><hr></li>
+                        <li><a href=contacto.html>CONTACTO</a></li>
+                    </ul>
+                </nav> 
+            </li>  
         </ul>
     </header>
-    <nav class="menu">
-        <ul class="nav">
-            <li><a href=espacios.html>ESPACIOS</a><hr></li>
-            <li><a href=trabajos.html>TRABAJOS</a><hr></li>
-            <li><a href=nosotros.html>NOSOTROS</a><hr></li>
-            <li><a href=contacto.html>CONTACTO</a></li>
-        </ul>
-    </nav>
     <main>
         <div class="fs-images" id="nosotros" style="background-image:url(img/darwin_studios_nosotros..jpg)">
             <div class="img-text">
@@ -41,9 +47,10 @@
     </main>
     <footer>
         <div class="footercontainer">
-            <p><a href="https://www.google.com/maps/place/Av.+Cnel.+Niceto+Vega+5350,+Buenos+Aires/data=!4m2!3m1!1s0x95bcb58b843974cb:0x2d59e7dae0977fc1?sa=X&ved=2ahUKEwjjs9Sy29ztAhV3HbkGHUBGBWEQ8gEwAHoECAsQAQ">Niceto Vega 5350 </a>| Palermo | Buenos Aires | Argentina | <a href="mailto:info@darwinstudios.com.ar">info@darwinstudios.com.ar</a></p> 
+            <p><a href="https://www.google.com/maps/place/Av.+Cnel.+Niceto+Vega+5350,+Buenos+Aires/data=!4m2!3m1!1s0x95bcb58b843974cb:0x2d59e7dae0977fc1?sa=X&ved=2ahUKEwjjs9Sy29ztAhV3HbkGHUBGBWEQ8gEwAHoECAsQAQ" target="_blank">Niceto Vega 5350 </a>| Palermo | Buenos Aires | Argentina | <a href="mailto:info@darwinstudios.com.ar">info@darwinstudios.com.ar</a></p> 
         </div>
     </footer>
 </body>
 <script src="js/scripts.js"></script>
+<script src="js/vue.js"></script>
 </html>
