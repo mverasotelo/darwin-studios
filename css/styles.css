@@ -144,6 +144,7 @@ header a{
     -o-animation:menuAbrir 0.5s ease;
 }
 
+
 #menu hr{
     display:none;
 }
@@ -441,7 +442,9 @@ footer{
     width:100%;
     display:grid;
     margin-top:0.5rem;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap:6px;
+    padding:0px 6px;
 }
 
 .grid-elem{
@@ -450,7 +453,6 @@ footer{
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    height:47.5vh;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -484,7 +486,24 @@ footer{
 }
 
 #espacios .grid .grid-elem{
-    height:35.4vh;
+    height:35.1vh;
+}
+
+#espaciosEnAccion .grid .grid-elem{
+    height:35.1vh;
+}
+
+.subtitulo{
+    font-weight: bolder;
+    font-size:3rem;
+    height:23vh;
+    letter-spacing: 0.8rem;
+    display:flex;
+    align-items: center;
+}
+
+.subtitulo::first-letter{
+    color:yellow;
 }
 
 .pop-up{
@@ -499,13 +518,13 @@ footer{
 
 .cuadro{
     width:80%;
-    height:70%;
+    height:85%;
     background: #4AC959;
     overflow:hidden;
     color:black;
     position:fixed;
     left:calc(10%);
-    top:calc(15%);
+    top:calc(12%);
     background:#111;
     display:flex;
     justify-content: center;
@@ -606,7 +625,7 @@ footer{
     }
 
     .icon{
-        font-size:2rem;
+        font-size:1.5rem;
     }
 
     .img-text{
@@ -638,6 +657,14 @@ footer{
     
     .cuadro p{
         font-size:1.1rem;
+    }
+
+    .logo{  
+        height:3rem;
+    }
+
+    .header{
+        height:5rem;    
     }
 
 }
