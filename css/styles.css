@@ -640,11 +640,13 @@ footer{
         font-size:1.2rem;
         line-height: 1.4rem;
     }
+
     .grid{
-        display:grid;
-        margin-top:0.5rem;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap:4px;
+        padding:0px 4px;
     }
+
     .grid-elem{
         height:33vh;
     }
