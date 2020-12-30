@@ -448,6 +448,7 @@ footer{
 }
 
 .grid-elem{
+    height:40vh;
     position: relative;
     cursor:pointer;
     background-position: center center;
