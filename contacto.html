@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,67 +9,55 @@
     <link rel="shortcut icon" href="img/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Solway:wght@700&family=Work+Sans:wght@500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d71332221e.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div v-show="show" id="loader" v-show="show"></div>
-    <header class="header">
-        <ul id="menuDesp" class="header-container">
-            <li><a href=index.html><img class="logo" src="img/isoB.png"></a></li>
-            <li class="iconos">
-                <i><a class="fab fa-instagram icon" href="https://www.instagram.com/darwin_studios/" target=_blank></a></i>
-                <i id="menuIcon" class="icon fas fa-bars" :class="iconoMenu" @click="desplegarMenu"></i>
-                <nav id="menu" :class="menuClass">
-                    <ul class="nav">
-                        <li><a href=espacios.html>ESPACIOS</a><hr></li>
-                        <li><a href=trabajos.html>TRABAJOS</a><hr></li>
-                        <li><a href=nosotros.html>NOSOTROS</a><hr></li>
-                        <li><a href=contacto.html>CONTACTO</a></li>
-                    </ul>
-                </nav> 
-            </li>  
-        </ul>
-    </header>
+    <div>
+        <div v-show="show" id="loader" v-show="show"></div>
+        <header class="header">
+            <ul id="menuDesp" class="header-container">
+                <li><a href="index.html"><img class="logo" src="img/isoB.png"></a></li>
+                <li>
+                    <i><a class="fab fa-instagram icon" href="https://www.instagram.com/darwin_studios/" target=_blank></a></i>
+                    <i id="menuIcon" class="icon fas fa-bars" :class="iconoMenu" @click="desplegarMenu"></i>
+                    <nav id="menu" :class="menuClass">
+                        <ul class="nav">
+                            <li><a href="#explora">ESPACIOS</a></li>
+                            <li><a href="producciones.html">PRODUCCIONES</a></li>
+                            <li><a href="nosotros.html">NOSOTROS</a></li>
+                            <li><a href="contacto.html">CONTACTO</a></li>
+                        </ul>
+                    </nav> 
+                </li>   
+            </ul>
+        </header>
     <main>
+        <div id="whatsapp">
+            <div id="hablemos"> <a href="https://api.whatsapp.com/send?phone=+541162896589" target=_blank>Hablemos</a></div>
+            <div id="logo-Whatsapp"> <a class="fab fa-whatsapp" href="https://api.whatsapp.com/send?phone=+541123456789" target=_blank></a></div>
+        </div>
         <div class="contacto">
             <section class="info">
-                <h3>CONTACTO</h3>
-                <p>NICETO VEGA 5780</p>
-                <p>PALERMO | CABA | ARGENTINA</p>
-                <p>www.darwin-studios.com</p>
-                <p><a href="mailto:info@clubbar.com.ar?subject:Consulta">info@darwin-studios.com</a></p>
-                <p>+54 11 5555 5555</p>
+                    <h4>CONTACTO</h4>
+                    <p><a target=blank_ href="https://www.google.com.ar/maps/place/Darwin+Studios/@-34.5855648,-58.4455463,15z/data=!4m5!3m4!1s0x95bcb58cbad0b66f:0x6500ed544b3d4673!8m2!3d-34.5888237!4d-58.4368656">NICETO VEGA 5350 </a></p>
+                    <p>PALERMO | CABA | ARGENTINA</p>
+                    <p><a href="mailto:info@clubbar.com.ar?subject:Consulta">info@darwinstudios.com.ar</a></p>
+                    <p><a href="https://api.whatsapp.com/send?phone=+541162896589" target=_blank>+54 9 1162896589</a></p>
             </section>
-            <section class="formulario">
-                 <form>
-                    <label>NOMBRE<br>
-                        <input type="text" id="name" name="name" required>
-                    </label><br>
-                    <label>E-MAIL
-                        <input type="email" id="email" name="email" required>
-                    </label><br>
-                    <label>TELEFONO
-                        <input type="tel" id="phone" minlength="8" name="phone" required>
-                    </label><br>
-                    <label>MENSAJE<br>
-                    <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
-                    <input class="order" type="submit" value="ENVIAR">
-                </form>
-            </section>
-        </div>
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8264.895294026597!2d-58.44724999038858!3d-34.5873236521137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5f2b9eedfc3%3A0xc704ec784b512f11!2sAv.%20Cnel.%20Niceto%20Vega%205780%2C%20C1414BFH%20CABA!5e0!3m2!1ses-419!2sar!4v1603295684442!5m2!1ses-419!2sar" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>        
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13138.941026736866!2d-58.4455463!3d-34.5855648!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb58cbad0b66f%3A0x6500ed544b3d4673!2sDarwin%20Studios!5e0!3m2!1ses-419!2sar!4v1611622143028!5m2!1ses-419!2sar" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>    
+            </div>
         </div>
     </main>
     <footer>
         <div class="footercontainer">
-            <p>Niceto Vega 5350 I Palermo I Buenos Aires I Argentina I info@darwinstudios.com.ar</a></p>
+            <p><a target=blank_ href="https://www.google.com.ar/maps/place/Darwin+Studios/@-34.5855648,-58.4455463,15z/data=!4m5!3m4!1s0x95bcb58cbad0b66f:0x6500ed544b3d4673!8m2!3d-34.5888237!4d-58.4368656">Niceto Vega 5350 </a>| Palermo | Buenos Aires | Argentina | <a href="mailto:info@clubbar.com.ar?subject:Consulta">info@darwinstudios.com.ar</a></a></p>
+            <p id="firma">Sitio web desarrollado por Mercedes Vera Sotelo</p>
         </div>
     </footer>
-</body>
-<script src="js/scripts.js"></script>
-<script src="js/vue.js"></script>
-</html>
+    </div>
+    </body>
+    <script src="js/scripts.js" async="async"></script>
+    <script src="js/vue.js" async="async"></script>
+    </html>

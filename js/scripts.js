@@ -1,20 +1,18 @@
-const body = document.body;
 const header = document.querySelector("header");
-menuIcon=document.querySelector("#menuIcon");
-const home = document.querySelector(".home");
-const prev = document.querySelector("#prev");
-const next = document.querySelector("#next");
-const img = document.querySelector("#img");
-var imagenes;
-var cont=0;
+const menu = document.querySelector("#menu");
+const iconoMenu = document.querySelector("#menuIcon");
 
+//Alto elementos
+let vh=window.innerHeight*0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);  
 
-if(img!=null){
-    setHomeImages();
-    carrousel(home, img, imagenes);
-    window.addEventListener("resize", setHomeImages);
-}
+window.addEventListener('resize', () => {
+    // We execute the same script as before
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
 
+//Cambio header
 window.addEventListener('scroll', cambioHeader);
 
 let lastScroll = 0;
@@ -27,97 +25,27 @@ function cambioHeader(){
     }
     if (currentScroll > lastScroll) {
         header.classList="header scroll-down";
-    } else if (currentScroll < lastScroll) {
+    }else if (currentScroll < lastScroll){
         header.classList="header scroll-up";
         header.style="transition:ease 0.5s";
     }
-    lastScroll = currentScroll;
+    lastScroll=currentScroll;
 }
-
-
-function setHomeImages(){
-    if(window.matchMedia('(max-width:720px)').matches){
-        imagenes = ["./img/2.jpg", "./img/1.jpg"];
-        img.src = "./img/2.jpg";
-    }else{
-        imagenes = ["./img/darwin.png", "./img/studio.jpg", "./img/th.jpg"];
-        img.src = "./img/darwin.png";
-    }
-}
-
-
-//retroceder y avanzar foto
-function retrocederFoto(){
-    if(cont>0){
-        img.src = imagenes[cont - 1];
-        cont--;
-    }else{
-        img.src = imagenes[imagenes.length - 1];
-        cont=imagenes.length - 1;
-    }
-}
-
-function pasarFoto(){
-    if(cont < imagenes.length - 1){
-        img.src = imagenes[cont + 1];
-        cont++;
-    }else{
-        img.src = imagenes[0];
-        cont=0;
-    }
-}
-
-function carrousel(contenedor,img,imagenes){
-    contenedor.addEventListener("click", function(event){
-        if(event.target==prev){
-            retrocederFoto();
-        }
-        else if(event.target==next){
-            pasarFoto();
-        }
-    });
-}
-
-//Touch
-if(img!=null){
-    var mc = new Hammer.Manager(img);
-    mc.add(new Hammer.Swipe({
-    direction: Hammer.DIRECTION_HORIZONTAL
-    }));
-
-    mc.on('swipeleft', function () {    
-        retrocederFoto()
-    });
-
-    mc.on('swiperight', function () {
-        pasarFoto()
-    });
-}
+/*
 var mc = new Hammer.Manager(menu);
 
 mc.add(new Hammer.Swipe({
-  direction: Hammer.DIRECTION_VERTICAL
+  direction: Hammer.DIRECTION_UP
 }));
 
-mc.on('swipeup', function () {
+mc.on('swipeup', function (ev) {
+    console.log(ev.type);
     cerrarMenu()
 });
 
-//formulario de contacto
-const nombre = document.querySelector("#name");
-const email = document.querySelector("#email");
-const tel = document.querySelector("#phone");
-const mensaje = document.querySelector("#mensaje");
-const formulario =document.querySelector(".formulario");
-
-if(formulario!=null){
-    formulario.addEventListener("submit", enviarForm);
-}
-
-function enviarForm(event){
-    var link="mer-vs@hotmail.com?subject=Consulta desde la web&body=Nombre: "+nombre.value+"<br>Teléfono:"+phone.value;
-    window.location.href="mailto:"+link;
-    if(event){
-        alert(event.target.tagName);
+function cerrarMenu(){
+    if(this.iconoMenu=="icon fas fa-bars"){
+        iconoMenu.classList="icon fas fa-bars";
+        menu.classList="cerrarMenu";
     }
-}
+}*/
