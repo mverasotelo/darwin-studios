@@ -23,7 +23,7 @@
                     <i id="menuIcon" class="icon fas fa-bars" :class="iconoMenu" @click="desplegarMenu"></i>
                     <nav id="menu" :class="menuClass">
                         <ul class="nav">
-                            <li><a href="#explora">ESPACIOS</a></li>
+                            <li><a @click="cerrarMenu" href="#explora">ESPACIOS</a></li>
                             <li><a href="producciones.html">PRODUCCIONES</a></li>
                             <li><a href="nosotros.html">NOSOTROS</a></li>
                             <li><a href="contacto.html">CONTACTO</a></li>
@@ -35,7 +35,7 @@
         <main>
             <div id="whatsapp">
                 <div id="hablemos"> <a href="https://api.whatsapp.com/send?phone=+541162896589" target=_blank>Hablemos</a></div>
-                <div id="logo-Whatsapp"> <a class="fab fa-whatsapp" href="https://api.whatsapp.com/send?phone=+541123456789" target=_blank></a></div>
+                <div id="logo-Whatsapp"> <a class="fab fa-whatsapp" href="https://api.whatsapp.com/send?phone=+541162896589" target=_blank></a></div>
             </div>
     <section id="home">
         <video alt="Darwin Studios" autoplay loop muted preload="auto" data-mobile-video>
@@ -67,9 +67,9 @@
                         <div :class="back" @click="retrocederFoto()" tabindex="0"></div>
                     </div>
                     <div class="texto">
-                        <h4>{[titulo]}</h4>
+                        <h4>{{titulo}}</h4>
                         <br>
-                        <p v-for="(val) in caracteristica">{[val]}</p>
+                        <p v-for="(val) in caracteristica">{{val}}</p>
                         <p v-show="plano" class="plano"><a :href="planoHref" v-html="texto" @click></a></p>
                     </div>
                         <div class="cerrarCuadro icon fas fa-times" @click="cerrarCuadro()" tabindex="0"></div>

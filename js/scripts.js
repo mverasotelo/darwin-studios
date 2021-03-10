@@ -1,6 +1,5 @@
 const header = document.querySelector("header");
 const menu = document.querySelector("#menu");
-const iconoMenu = document.querySelector("#menuIcon");
 
 //Alto elementos
 let vh=window.innerHeight*0.01;
@@ -12,12 +11,15 @@ window.addEventListener('resize', () => {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
+
 //Cambio header
 window.addEventListener('scroll', cambioHeader);
 
 let lastScroll = 0;
+
 function cambioHeader(){
     const currentScroll = window.scrollY;
+    console.log(currentScroll);
     if (currentScroll == 0) {
         header.classList="header";
         header.style="transition:ease 0.5s";
@@ -29,8 +31,17 @@ function cambioHeader(){
         header.classList="header scroll-up";
         header.style="transition:ease 0.5s";
     }
+    if (currentScroll > 143) {
+        document.querySelector(".ver-mas").style.visibility="hidden";
+    }
+    else{
+        document.querySelector(".ver-mas").style.visibility="visible";
+    }
     lastScroll=currentScroll;
 }
+
+
+
 /*
 var mc = new Hammer.Manager(menu);
 

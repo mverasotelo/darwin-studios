@@ -21,17 +21,20 @@ new Vue({
                 this.menuClass="abrirMenu";
                 document.body.style.overflow='hidden';
             }else{
-                this.iconoMenu="icon fas fa-bars";
-                this.menuClass="cerrarMenu";
-                document.body.style.overflow ='auto';
+                this.cerrarMenu();
             }
         },
-    }
+        cerrarMenu: function(){
+            this.iconoMenu="icon fas fa-bars";
+            this.menuClass="cerrarMenu";
+            document.body.style.overflow ='auto';
+        },
+    },
 });
+
 
 new Vue({
     el:"#explora",
-    delimiters:['{[',']}'],
     data:{
         espacios:["NAVE NICETO", "NAVE DARWIN", "HALL", "NAVE D", "ESTUDIO STREAMING","EXTERIORES","ESPACIO 1+1","LADO B"],
         caracteristicas:[["Dimensiones: 28,65 m x 16,9 m","Superficie: 484 m²","Altura: 9 m, hasta la pasarela técnica","Entrada de vehiculo: 4,68 m x 4,2 m","Espacio sin columnas","Tablero Trifásico con 1 toma A63 y 2 tomas A32, con disyuntores independientes","Potencia total: A127. Consultar por más capacidad","2 camarines privados","1 sala de vestuario, maquillaje y pelo","Baños","Zona comedor y descanso, con living y mesas","Espacio para catering","Baños","Estacionamiento"],
